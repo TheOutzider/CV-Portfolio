@@ -2,6 +2,9 @@ import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
   output: 'export',
+  trailingSlash: true,
+  basePath: '/CV-Portfolio',
+  assetPrefix: '/CV-Portfolio/',
   typescript: {
     ignoreBuildErrors: true,
   },
