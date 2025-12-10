@@ -8,6 +8,8 @@ on:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -17,7 +19,7 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Delete old lock file and install dependencies
+      - name: Install dependencies (clean)
         run: |
           rm -f package-lock.json
           npm install
