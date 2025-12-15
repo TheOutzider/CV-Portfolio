@@ -7,8 +7,12 @@ on:
 
 jobs:
   build-and-deploy:
-    runs-on:  ubuntu-latest
-    steps: 
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
+    steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -16,14 +20,22 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
+          cache: ''
 
-      - name: Install dependencies
-        run:  npm ci
+      - name: Install dependencies (clean)
+        run: |
+          rm -f package-lock.json
+          npm install
 
-      - name: Build (next build)
+      - name: Build and export
         run: npm run build
 
+      - name: Debug - list output folder
+        run: |
+          echo "=== Contenu du dossier ./out ==="
+          ls -la out || true
+          echo "=== Arborescence (max depth 3) ==="
+          find out -maxdepth 3 -type f -print || true
       - name: Add .nojekyll file
         run: touch ./out/.nojekyll
 
