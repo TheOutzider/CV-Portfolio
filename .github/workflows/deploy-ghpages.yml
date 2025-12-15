@@ -36,6 +36,8 @@ jobs:
           ls -la out || true
           echo "=== Arborescence (max depth 3) ==="
           find out -maxdepth 3 -type f -print || true
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
 
       - name: Deploy to gh-pages branch
         uses: peaceiris/actions-gh-pages@v3
