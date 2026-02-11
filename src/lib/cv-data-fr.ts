@@ -69,15 +69,21 @@ export const cvDataFR: CVData = {
   projects: [
     {
       name: "Terminal de Portfolio",
-      description: "Un terminal interactif basé sur le web pour présenter mon CV (ce projet !).",
+      description: "Un 'terminal interactif' basé sur le web pour présenter mon CV (ce projet !).",
       tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-      link: "https://github.com/user/portfolio",
+      link: "https://theoutzider.github.io/CV-Portfolio/",
     },
     {
-      name: "Plateforme E-commerce",
-      description: "Une plateforme e-commerce complète avec un CMS personnalisé.",
-      tech: ["Next.js", "GraphQL", "PostgreSQL", "Stripe"],
-      link: "https://github.com/user/ecommerce",
+      name: "SuperDemoReact",
+      description: "Une application Javascript type 'demo technique', c'est mon premier projet.",
+      tech: ["React.js"],
+      link: "https://theoutzider.github.io/SuperDemoReact",
+    },
+    {
+      name: "SRD Chroniques Oubliées Fantasy 2",
+      description: "Une application MAUI .Net de gestion de campagne et d'équipe de JDR sur la base des règles de COF2.",
+      tech: [".Net", "C#", "MAUI", "BLAZOR", "SQLite"], 
+      link: "https://github.com/TheOutzider/SRDCOF2MAUI",
     },
   ],
   contact: {
