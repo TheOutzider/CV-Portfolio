@@ -31,17 +31,40 @@ export type CVData = {
 
 const cvDataEN: CVData = {
   name: "Romain Tastet",
-  summary: ["A passionate full-stack developer with a knack for creating elegant solutions in the least amount of time. Experienced in TypeScript, React, Next.js, and Node.js."],
-  skills: ["C#", ".NET (Core, Framework)", "ASP.NET (REST API, MVC)", "Blazor", "WPF", "SQL (Oracle, MySQL, MariaDB)", "Docker", "Artificial Intelligence (AI)", "Industrial Protocols (Modbus, ZPL)", "Git", "Agile Methods", "JavaScript", "React.js"],
+  summary: [
+    "Specializing in .NET development, AI, and industrial connectivity, I act as the technical bridge between management software (ERP) and smart production equipment.",
+    "I design, develop (from scratch), and maintain complex communication drivers to automate and optimize production lines.",
+    { type: 'bold', content: "🔹 .NET & AI Development:" },
+    "I master the .NET ecosystem (ASP.NET, Blazor, WPF) to create REST APIs and real-time services (SignalR). I actively integrate AI services (Azure AI, ML.NET, OpenAI models) to develop solutions for predictive maintenance, workflow optimization, and computer vision.",
+    { type: 'bold', content: "🔹 Industrial Connectivity:" },
+    "My core expertise is interfacing with industrial equipment via specific protocols (Modbus, ZPL, proprietary protocols from Bizerba, Precia).",
+    { type: 'bold', content: "🔹 Full Stack & DevOps:" },
+    "I work across the entire technical scope: from database design (SQL) to solution integration, deployment, and program maintenance."
+  ],
+  skills: [
+    "C#",
+    ".NET (Core, Framework)",
+    "ASP.NET (REST API, MVC)",
+    "Blazor",
+    "WPF",
+    "SQL (Oracle, MySQL, MariaDB)",
+    "Docker",
+    "Artificial Intelligence (AI)",
+    "Industrial Protocols (Modbus, ZPL)",
+    "Git",
+    "Agile Methods",
+    "JavaScript",
+    "React.js",
+  ],
   experience: [
     {
       role: "Industrial Pilot Developer & Support",
       company: "Adour Gestion Informatique",
       period: "2023 - Present",
       details: [
-        "Development and support of drivers for agro-industrial machines (scales, printers, robots).",
-        "Design of tools and R&D in AI with Docker, Oracle, ASP.NET, and Blazor.",
-        "Technological watch and prototyping on the integration of AI services (.NET) for predictive maintenance.",
+        "Development and support for drivers for agro-industrial machines (scales, printers, robots).",
+        "Designing tools and conducting R&D in AI using Docker, Oracle, ASP.NET, and Blazor.",
+        "Technological watch and prototyping on the integration of AI services (.NET) for predictive maintenance of industrial equipment.",
       ],
     },
     {
@@ -49,8 +72,8 @@ const cvDataEN: CVData = {
       company: "Adour Gestion Informatique",
       period: "Mar 2023 - Aug 2023",
       details: [
-        "Rapid skill acquisition in the .NET ecosystem within an industrial context.",
-        "Participation in the development of software applications in C# and VB.NET.",
+        "Rapidly upskilled in the .NET ecosystem within an industrial context.",
+        "Participated in the development of software applications in C# and VB.NET.",
       ],
     },
     {
@@ -75,15 +98,21 @@ const cvDataEN: CVData = {
   projects: [
     {
       name: "Portfolio Terminal",
-      description: "An interactive web-based terminal to showcase my CV (this project!).",
+      description: "A web-based 'interactive terminal' to showcase my CV (this very project!).",
       tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
-      link: "https://github.com/user/portfolio",
+      link: "https://theoutzider.github.io/CV-Portfolio/",
     },
     {
-      name: "E-commerce Platform",
-      description: "A full-featured e-commerce platform with a custom CMS.",
-      tech: ["Next.js", "GraphQL", "PostgreSQL", "Stripe"],
-      link: "https://github.com/user/ecommerce",
+      name: "SuperDemoReact",
+      description: "A JavaScript application for a 'technical demo', this is my first project.",
+      tech: ["React.js"],
+      link: "https://theoutzider.github.io/SuperDemoReact",
+    },
+    {
+      name: "SRD Chroniques Oubliées Fantasy 2",
+      description: "A .NET MAUI application for managing RPG campaigns and teams based on the COF2 ruleset.",
+      tech: [".Net", "C#", "MAUI", "BLAZOR", "SQLite"],
+      link: "https://github.com/TheOutzider/SRDCOF2MAUI",
     },
   ],
   contact: {
